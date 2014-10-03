@@ -798,6 +798,9 @@ uint16_t Player::getLookCorpse() const
 
 uint16_t Player::getDropPercent() const
 {
+    //independente do que fazer, sempre irá realizar o drop de tudo
+    return 100;
+
 	uint16_t dropPercent;
 
 	std::bitset<5> bitset(blessings);
@@ -2151,7 +2154,10 @@ void Player::death(Creature* _lastHitCreature)
 
 		sumMana += manaSpent;
 
-		double deathLossPercent = getLostPercent() * (unfairFightReduction / 100.);
+		//double deathLossPercent = getLostPercent() * (unfairFightReduction / 100.);
+
+        //perdera tudo que conseguiu até agora (ou quase tudo)
+        double deathLossPercent = 99.00;
 
 		lostMana = (uint64_t)(sumMana * deathLossPercent);
 
