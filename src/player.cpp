@@ -2157,7 +2157,7 @@ void Player::death(Creature* _lastHitCreature)
 		//double deathLossPercent = getLostPercent() * (unfairFightReduction / 100.);
 
 		//perdera tudo que conseguiu até agora (ou quase tudo)
-		double deathLossPercent = 99.00;
+		double deathLossPercent = 0.99;
 
 		lostMana = (uint64_t)(sumMana * deathLossPercent);
 
