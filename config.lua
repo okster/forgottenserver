@@ -1,6 +1,6 @@
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
-worldType = "pvp"
+worldType = "pvp-enforced"
 hotkeyAimbotEnabled = "yes"
 protectionLevel = 1
 killsToRedSkull = 3
@@ -11,13 +11,13 @@ removeChargesFromRunes = "yes"
 timeToDecreaseFrags = 24 * 60 * 60 * 1000
 whiteSkullTime = 15 * 60 * 1000
 stairJumpExhaustion = 2000
-experienceByKillingPlayers = "no"
-expFromPlayersLevelRange = 75
+experienceByKillingPlayers = "yes"
+expFromPlayersLevelRange = 1000
 noDamageToSameLookfeet = "no"
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "127.0.0.1"
+ip = "54.94.183.236"
 bindOnlyGlobalAddress = "no"
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -59,8 +59,8 @@ maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
 mysqlHost = "127.0.0.1"
-mysqlUser = "forgottenserver"
-mysqlPass = ""
+mysqlUser = "root"
+mysqlPass = "123"
 mysqlDatabase = "forgottenserver"
 mysqlPort = 3306
 mysqlSock = ""
