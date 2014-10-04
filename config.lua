@@ -39,7 +39,7 @@ deathLosePercent = -1
 
 -- Houses
 -- NOTE: set housePriceEachSQM to -1 to disable the ingame buy house functionality
-housePriceEachSQM = 1000
+housePriceEachSQM = 1500
 houseRentPeriod = "never"
 
 -- Item Usage
@@ -75,9 +75,9 @@ emoteSpells = "no"
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 5
-rateSkill = 3
+rateSkill = 5
 rateLoot = 2
-rateMagic = 3
+rateMagic = 5
 rateSpawn = 1
 
 -- Monsters
@@ -88,7 +88,7 @@ deSpawnRadius = 50
 staminaSystem = "yes"
 
 -- Scripts
-warnUnsafeScripts = "no"
+warnUnsafeScripts = "yes"
 convertUnsafeScripts = "no"
 
 -- Startup
@@ -99,5 +99,5 @@ startupDatabaseOptimization = "no"
 -- Status server information
 ownerName = ""
 ownerEmail = ""
-url = "http://otland.net/"
-location = "Sweden"
+url = ""
+location = "Brasil"
