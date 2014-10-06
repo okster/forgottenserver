@@ -3,6 +3,7 @@
 	<health now="1500" max="1500"/>
 	<look type="242" corpse="8964"/>
 	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -39,5 +40,7 @@
 		<item id="2147" countmax="3" chance="3200"/><!-- small ruby -->
 		<item id="8299" chance="2500"/><!-- glimmering soil -->
 		<item id="8921" chance="1250"/><!-- wand of draconia -->
+		<item id="13757" chance="1475"/> <!-- coal -->
+		<item id="10553" chance="13570"/><!-- fiery hearts -->
 	</loot>
 </monster>

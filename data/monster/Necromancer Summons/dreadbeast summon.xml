@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dreadbeast" species="undead" nameDescription="a dreadbeast" race="undead" experience="580" speed="200" manacost="515">
+	<health now="515" max="515"/>
+	<look type="101" head="20" body="30" legs="40" feet="50" corpse="3031"/>
+	<targetchange interval="60000" chance="10"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="80"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-0" max="-100"/>
+		<attack name="lifedrain" interval="2000" chance="20" radius="1" target ="1" min="-150" max="-250">
+			<attribute key="areaEffect" value="yellowenergy"/>
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="20" radius="1" target ="1" min="-150" max="-250">
+			<attribute key="areaEffect" value="purpleenergy"/>
+			<attribute key="shootEffect" value="suddendeath"/>
+		</attack>
+	</attacks>
+	<defenses armor="34" defense="36"/>
+	<elements>
+		<element firePercent="70"/>
+		<element physicalPercent="-25"/>
+	</elements>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<loot>
+		<item id="2148" countmax="55" chance="15000"/><!-- gold coin -->
+		<item id="2148" countmax="35" chance="15000"/><!-- gold coin -->
+		<item id="2231" chance="11000"/><!-- big bone -->
+		<item id="2230" chance="47750"/><!-- bone -->
+		<item id="2449" chance="3250"/><!-- bone club -->
+		<item id="2541" chance="2600"/><!-- bone shield -->
+		<item id="2796" chance="1750"/><!-- green mushroom -->
+		<item id="5925" chance="900"/><!-- hardened bone -->
+		<item id="2463" chance="5650"/><!-- plate armor -->
+		<item id="7618" chance="900"/><!-- health potion -->
+		<item id="2229" chance="21000"/><!-- skull -->
+	</loot>
+</monster>

@@ -3,6 +3,7 @@
 	<health now="225" max="225"/>
 	<look type="226" head="114" body="98" legs="97" feet="114" corpse="2220"/>
 	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -35,9 +36,7 @@
 		<element firePercent="-15"/>
 		<element energyPercent="-15"/>
 		<element icePercent="-15"/>
+		<element deathPercent="100"/>
+		<element earthPercent="100"/>
 	</elements>
-	<immunities>
-		<immunity death="1"/>
-		<immunity earth="1"/>
-	</immunities>
 </monster>

@@ -3,6 +3,7 @@
 	<health now="2500" max="2500"/>
 	<look type="20" corpse="6067"/>
 	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -44,6 +45,6 @@
 		<voice sentence="Rraaar!"/>
 	</voices>
 	<loot>
-		<item id="2226" chance="50000" /><!-- fishbone -->
-	</loot>
+    <item id="2226" chance="50000" /><!-- fishbone -->
+</loot>
 </monster>

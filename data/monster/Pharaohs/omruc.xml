@@ -3,6 +3,7 @@
 	<health now="4300" max="4300"/>
 	<look type="90" corpse="6025"/>
 	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -41,8 +42,10 @@
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
 	</defenses>
+	<elements>
+		<element deathPercent="100"/>
+	</elements>
 	<immunities>
-		<immunity death="1"/>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
 	</immunities>
@@ -70,5 +73,6 @@
 		<item id="2195" chance="1500"/><!-- boots of haste -->
 		<item id="2444" chance="300"/><!-- hammer of wrath -->
 		<item id="2352" chance="100000"/><!-- crystal arrow -->
+		<item id="11207" chance="5000"/><!-- mini mummy -->
 	</loot>
 </monster>
