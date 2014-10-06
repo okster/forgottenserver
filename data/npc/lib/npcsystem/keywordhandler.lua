@@ -1,6 +1,6 @@
 -- Advanced NPC System by Jiddo
 
-if KeywordHandler == nil then
+if(KeywordHandler == nil) then
 	KeywordNode = {
 		keywords = nil,
 		callback = nil,
@@ -28,18 +28,20 @@ if KeywordHandler == nil then
 
 	-- Returns true if message contains all patterns/strings found in keywords.
 	function KeywordNode:checkMessage(message)
-		if self.keywords.callback ~= nil then
+		local ret = true
+		if(self.keywords.callback ~= nil) then
 			return self.keywords.callback(self.keywords, message)
 		end
-		for i,v in ipairs(self.keywords) do
-			if type(v) == 'string' then
+		for i, v in ipairs(self.keywords) do
+			if(type(v) == 'string') then
 				local a, b = string.find(message, v)
-				if a == nil or b == nil then
-					return false
+				if(a == nil or b == nil) then
+					ret = false
+					break
 				end
 			end
 		end
-		return true
+		return ret
 	end
 
 	-- Returns the parent of this node or nil if no such node exists.
@@ -65,7 +67,7 @@ if KeywordHandler == nil then
 
 	-- Adds a pre-created childNode to this node. Should be used for example if several nodes should have a common child.
 	function KeywordNode:addChildKeywordNode(childNode)
-		self.children[#self.children + 1] = childNode
+		table.insert(self.children, childNode)
 		childNode.parent = self
 		return childNode
 	end
@@ -79,44 +81,41 @@ if KeywordHandler == nil then
 	function KeywordHandler:new()
 		local obj = {}
 		obj.root = KeywordNode:new(nil, nil, nil)
-		obj.lastNode = {}
 		setmetatable(obj, self)
 		self.__index = self
 		return obj
 	end
 
 	-- Resets the lastNode field, and this resetting the current position in the node hierarchy to root.
-	function KeywordHandler:reset(cid)
-		if self.lastNode[cid] then
-			self.lastNode[cid] = nil
-		end
+	function KeywordHandler:reset()
+		self.lastNode = nil
 	end
 
 	-- Makes sure the correct childNode of lastNode gets a chance to process the message.
 	function KeywordHandler:processMessage(cid, message)
-		local node = self:getLastNode(cid)
-		if node == nil then
+		local node = self:getLastNode()
+		if(node == nil) then
 			error('No root node found.')
 			return false
 		end
 
 		local ret = self:processNodeMessage(node, cid, message)
-		if ret then
+		if(ret) then
 			return true
 		end
 
 		if node:getParent() then
 			node = node:getParent() -- Search through the parent.
 			local ret = self:processNodeMessage(node, cid, message)
-			if ret then
+			if(ret) then
 				return true
 			end
 		end
 
-		if node ~= self:getRoot() then
+		if(node ~= self:getRoot()) then
 			node = self:getRoot() -- Search through the root.
 			local ret = self:processNodeMessage(node, cid, message)
-			if ret then
+			if(ret) then
 				return true
 			end
 		end
@@ -128,14 +127,15 @@ if KeywordHandler == nil then
 	function KeywordHandler:processNodeMessage(node, cid, message)
 		local messageLower = string.lower(message)
 		for i, childNode in pairs(node.children) do
-			if childNode:checkMessage(messageLower) then
-				local oldLast = self.lastNode[cid]
-				self.lastNode[cid] = childNode
+			if(childNode:checkMessage(messageLower)) then
+				local oldLast = self.lastNode
+				self.lastNode = childNode
 				childNode.parent = node -- Make sure node is the parent of childNode (as one node can be parent to several nodes).
-				if childNode:processMessage(cid, message) then
+				if(childNode:processMessage(cid, message)) then
 					return true
+				else
+					self.lastNode = oldLast
 				end
-				self.lastNode[cid] = oldLast
 			end
 		end
 		return false
@@ -147,8 +147,8 @@ if KeywordHandler == nil then
 	end
 
 	-- Returns the last processed keywordnode or root if no last node is found.
-	function KeywordHandler:getLastNode(cid)
-		return self.lastNode[cid] or self:getRoot()
+	function KeywordHandler:getLastNode()
+		return self.lastNode or self:getRoot()
 	end
 
 	-- Adds a new keyword to the root keywordnode. Returns the new node.
@@ -160,15 +160,16 @@ if KeywordHandler == nil then
 	--	This function MIGHT not work properly yet. Use at your own risk.
 	function KeywordHandler:moveUp(count)
 		local steps = count
-		if steps == nil or type(steps) ~= "number" then
+		if(steps == nil) then
 			steps = 1
 		end
-		for i = 1, steps, 1 do
-			if self.lastNode[cid] == nil then
+		for i = 1, steps,1 do
+			if(self.lastNode == nil) then
 				break
+			else
+				self.lastNode = self.lastNode:getParent() or self:getRoot()
 			end
-			self.lastNode[cid] = self.lastNode[cid]:getParent() or self:getRoot()
 		end
-		return self.lastNode[cid]
+		return self.lastNode
 	end
 end
