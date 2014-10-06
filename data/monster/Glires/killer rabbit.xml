@@ -3,7 +3,6 @@
 	<health now="205" max="205"/>
 	<look type="74" corpse="6017"/>
 	<targetchange interval="5000" chance="20"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -18,7 +17,7 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="1200" min="-0" max="-100"/>
+		<attack name="melee" interval="1200" min="0" max="-100"/>
 		<attack name="Blood Rage" interval="2000" chance="30" target="1"/>
 	</attacks>
 	<defenses armor="30" defense="35">

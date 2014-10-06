@@ -3,7 +3,6 @@
 	<health now="505" max="505"/>
 	<look type="32" corpse="5971"/>
 	<targetchange interval="2000" chance="0"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -18,7 +17,7 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="1200" min="-0" max="-55"/>
+		<attack name="melee" interval="1200" min="0" max="-55"/>
 		<attack name="fire" interval="2000" chance="30" length="8" spread="3" min="-30" max="-60">
 			<attribute key="areaEffect" value="fire"/>
 		</attack>
@@ -43,6 +42,6 @@
 		<voice sentence="Show me how good you are without some rolled newspaper!"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="73" chance="50000"/><!-- gold coins -->
+		<item id="2148" countmax="75" chance="50000"/><!-- gold coins -->
 	</loot>
 </monster>

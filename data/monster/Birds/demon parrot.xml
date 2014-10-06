@@ -3,7 +3,6 @@
 	<health now="360" max="360"/>
 	<look type="217" corpse="6056"/>
 	<targetchange interval="5000" chance="20"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -18,7 +17,7 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="1200" min="-0" max="-100"/>
+		<attack name="melee" interval="1200" min="0" max="-100"/>
 		<attack name="drunk" interval="1000" chance="30" length="5" spread="0">
 			<attribute key="areaEffect" value="rednote"/>
 		</attack>

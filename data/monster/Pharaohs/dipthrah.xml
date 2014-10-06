@@ -3,7 +3,6 @@
 	<health now="4200" max="4200"/>
 	<look type="87" corpse="6031"/>
 	<targetchange interval="5000" chance="8"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -39,11 +38,11 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element physicalPercent="100"/>
-		<element deathPercent="100"/>
 		<element icePercent="30"/>
 	</elements>
 	<immunities>
+		<immunity physical="1"/>
+		<immunity death="1"/>
 		<immunity invisible="1"/>
 	</immunities>
 	<summons maxSummons="4">
@@ -65,6 +64,5 @@
 		<item id="2436" chance="500"/><!-- skull staff -->
 		<item id="2446" chance="300"/><!-- pharaoh sword -->
 		<item id="2354" chance="100000"/><!-- ornamented ankh -->
-		<item id="11207" chance="500"/><!-- mini mummy -->
 	</loot>
 </monster>

@@ -3,7 +3,6 @@
 	<health now="300" max="300"/>
 	<look type="54" head="20" body="30" legs="40" feet="50" corpse="6081"/>
 	<targetchange interval="5000" chance="8"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="0"/>
@@ -18,33 +17,33 @@
 		<flag runonhealth="30"/>
 	</flags>
 	<attacks>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="rat" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="chicken" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Green Frog" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Bug" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Pig" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Bug" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Kongra" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Dog" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
-	<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="skunk" duration="20000">
-		<attribute key="areaEffect" value="yellowspark"/>
-	</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="rat" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="chicken" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Green Frog" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Bug" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Pig" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Bug" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Kongra" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="Dog" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="skunk" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
 	</attacks>
 	<defenses armor="8" defense="12"/>
 	<immunities>

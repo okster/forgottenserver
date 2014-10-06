@@ -3,7 +3,6 @@
 	<health now="930" max="930"/>
 	<look type="300" corpse="10324"/>
 	<targetchange interval="5000" chance="10"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -18,15 +17,15 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="1200" min="-0" max="-120"/>
-		<attack name="physical" interval="1500" chance="30" range="7" min="-0" max="-30">
+		<attack name="melee" interval="1200" min="0" max="-120"/>
+		<attack name="physical" interval="1500" chance="30" range="7" min="0" max="-30">
 			<attribute key="shootEffect" value="suddendeath"/>
 			<attribute key="areaEffect" value="mortarea"/>
 		</attack>
 		<attack name="death" interval="1500" chance="30" range="7" radius="4" target="1" min="-12" max="-20">
 			<attribute key="shootEffect" value="fire"/>
 			<attribute key="areaEffect" value="redspark"/>
-	 	</attack>
+		</attack>
 		<attack name="physical" interval="1500" chance="40" lenght="8" spread="3" min="-20" max="-30">
 			<attribute key="shootEffect" value="suddendeath"/>
 			<attribute key="areaEffect" value="mortarea"/>
