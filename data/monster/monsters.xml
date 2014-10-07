@@ -817,10 +817,7 @@
 	<monster name="Adept of the Cult" file="Voodoo Cultists/adept of the cult.xml"/>
 	<monster name="Enlightened of the Cult" file="Voodoo Cultists/enlightened of the cult.xml"/>
 	<monster name="Novice of the Cult" file="Voodoo Cultists/novice of the cult.xml"/>
-	
-	<!-- Wyrms -->
-	<monster name="Elder Wyrm" file="Wyrms/elder wyrm.xml"/>
-	
+
 	<!-- Wild Magics -->
 	<monster name="Wild Fire Magic" file="Wild Magics/wild fire magic.xml"/>
 	<monster name="Wild Fury Magic" file="Wild Magics/wild fury magic.xml"/>
