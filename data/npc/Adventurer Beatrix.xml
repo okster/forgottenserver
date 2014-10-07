@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Adventurer Beatrix" script="tools.lua" walkinterval="2770" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="136" head="79" body="82" legs="95" feet="115" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Hi |PLAYERNAME|! Looking for some equipments?"/>
+		<parameter key="message_decline" value="Well... tell me if you want something else."/>
+	</parameters>
+</npc>
