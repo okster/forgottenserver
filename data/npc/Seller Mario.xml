@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Seller Mario" script="home stuff.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="126" body="38" legs="115" feet="114" addons="2"/>
+	<parameters>
+		<parameter key="message_greet" value="Welcome |PLAYERNAME|, searching for decorations? Then you came to the right place!"/>
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Sorry then..."/>
+	</parameters>
+</npc>
