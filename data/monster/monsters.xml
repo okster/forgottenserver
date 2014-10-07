@@ -9,6 +9,7 @@
 	<monster name="Drillworm" file="Annelids/drillworm.xml"/>
 	<monster name="Rotworm" file="Annelids/rotworm.xml"/>
 	<monster name="Rift Worm" file="Annelids/rift worm.xml"/>
+	<monster name="Giant Worm" file="Annelids/giant worm.xml"/>
 
 	<!-- Apes -->
 	<monster name="Kongra" file="Apes/kongra.xml"/>
@@ -652,6 +653,7 @@
 	<monster name="Wild Warrior" file="Outlaws/wild warrior.xml"/>
 	<monster name="Feverish Citizen" file="Outlaws/feverish citizen.xml"/>
 	<monster name="Crypt Defiler" file="Outlaws/crypt defiler.xml"/>
+	<monster name="Dreadknight" file="Outlaws/dreadknight.xml"/>
 
 	<!-- Pharaohs -->
 	<monster name="Ashmunrah" file="Pharaohs/ashmunrah.xml"/>
@@ -798,9 +800,9 @@
 	<monster name="Evil Sheep Lord" file="Ungulates/evil sheep lord.xml"/>
 	<monster name="Evil Sheep" file="Ungulates/evil sheep.xml"/>
 	<monster name="Horse" file="Ungulates/horse.xml"/>
-	<monster name="Horse1" file="Ungulates/horse(brown).xml"/>
-	<monster name="Horse2" file="Ungulates/horse(fire).xml"/>
-	<monster name="Horse3" file="Ungulates/horse(grey).xml"/>
+	<monster name="Brown Horse" file="Ungulates/brown horse.xml"/>
+	<monster name="War Horse" file="Ungulates/war horse.xml"/>
+	<monster name="Grey Horse" file="Ungulates/grey horse.xml"/>
 	<monster name="Mammoth" file="Ungulates/mammoth.xml"/>
 	<monster name="Mushroom Sniffer" file="Ungulates/mushroom sniffer.xml"/>
 	<monster name="Pig" file="Ungulates/pig.xml"/>
@@ -815,7 +817,10 @@
 	<monster name="Adept of the Cult" file="Voodoo Cultists/adept of the cult.xml"/>
 	<monster name="Enlightened of the Cult" file="Voodoo Cultists/enlightened of the cult.xml"/>
 	<monster name="Novice of the Cult" file="Voodoo Cultists/novice of the cult.xml"/>
-
+	
+	<!-- Wyrms -->
+	<monster name="Elder Wyrm" file="Wyrms/elder wyrm.xml"/>
+	
 	<!-- Wild Magics -->
 	<monster name="Wild Fire Magic" file="Wild Magics/wild fire magic.xml"/>
 	<monster name="Wild Fury Magic" file="Wild Magics/wild fury magic.xml"/>
